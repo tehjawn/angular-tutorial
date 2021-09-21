@@ -1,5 +1,10 @@
+.hero-submitted {
+  padding: 16px;
+}
+
 .hero-form-ctn {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #fafbfc;
