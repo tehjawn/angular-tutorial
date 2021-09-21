@@ -1,0 +1,21 @@
+.hero-form-ctn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafbfc;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.hero-form {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 0 2px 16px -4px rgba($color: #000000, $alpha: 0.25);
+}

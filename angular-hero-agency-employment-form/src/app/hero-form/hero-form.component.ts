@@ -22,8 +22,23 @@ export class HeroFormComponent implements OnInit {
     'Chuck Overstreet',
   )
 
+  myHero = new Hero(
+    42,
+    'SkyDog',
+    'Fetch any object at any distance',
+    'Leslie Rollover',
+  );
+
   getModel() {
-    return JSON.stringify(this.model, null, 2);
+    return this.toJSON(this.model)
+  }
+
+  getHero() {
+    return this.toJSON(this.myHero)
+  }
+
+  toJSON(obj: any) {
+    return JSON.stringify(obj, null, 2);
   }
 
   submitted = false;
@@ -32,6 +47,8 @@ export class HeroFormComponent implements OnInit {
     this.submitted = true;
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    console.log(`My Hero is: ${this.myHero.name}`)
+  }
 
 }
