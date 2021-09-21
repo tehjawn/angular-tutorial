@@ -1,13 +1,19 @@
 <div class="hero-form-ctn">
-  <div class="hero-form">
+  <form #heroForm="ngForm" class="hero-form">
     <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" type="text" required [(ngModel)]="model.name" name="name">
+      <br>
+      <label for="alterEgo">Alter Ego</label>
+      <input class="form-control" type="text" [(ngModel)]="model.alterEgo" name="alterEgo">
+      <br>
       <label for="power">Hero Power</label>
-      <select class="form-control" id="power" required>
+      <select class="form-control" id="power" required [(ngModel)]="model.power" name="power">
         <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
       </select>
     </div>
     <hr>
-    <pre>{{getModel()}}</pre>
-    <pre>{{getHero()}}</pre>
-  </div>
+    <pre>{{ model | json }}</pre>
+    <pre>{{ myHero | json }}</pre>
+  </form>
 </div>

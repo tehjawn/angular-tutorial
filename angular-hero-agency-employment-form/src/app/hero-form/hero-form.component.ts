@@ -29,18 +29,6 @@ export class HeroFormComponent implements OnInit {
     'Leslie Rollover',
   );
 
-  getModel() {
-    return this.toJSON(this.model)
-  }
-
-  getHero() {
-    return this.toJSON(this.myHero)
-  }
-
-  toJSON(obj: any) {
-    return JSON.stringify(obj, null, 2);
-  }
-
   submitted = false;
 
   onSubmit() {
